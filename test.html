@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CKeditor File Upload</title>
+
+	<script type="text/javascript" src="https://cdn.ckeditor.com/4.5.1/standard/ckeditor.js"></script>
+</head>
+<body>
+
+	<textarea name="editor1" id="editor1" rows="10" cols="80"></textarea>
+
+</body>
+	
+<script type="text/javascript">
+// Replace the <textarea id="editor1"> with a CKEditor
+// instance, using default configuration.
+CKEDITOR.editorConfig = function (config) {
+    config.language = 'es';
+    config.uiColor = '#F7B42C';
+    config.height = 300;
+    config.toolbarCanCollapse = true;
+
+};
+// CKEDITOR.replace('editor1');
+
+CKEDITOR.replace( 'editor1', {
+   	filebrowserBrowseUrl: 'browse.php',
+    filebrowserUploadUrl: 'imgupload.php'
+});
+
+</script>
+
+</html>
